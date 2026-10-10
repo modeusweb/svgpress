@@ -33,6 +33,8 @@ export const author = {
   url: siteUrl,
 };
 
+export const repoUrl = 'https://github.com/modeusweb/svgpress';
+
 export const keywords = [
   'svg optimizer',
   'svgo',
