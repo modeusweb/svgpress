@@ -8,8 +8,8 @@ const STYLES: Record<
 > = {
   ready: {
     label: 'Ready',
-    className: 'bg-surface-3 text-muted',
-    dot: 'border-muted',
+    className: 'bg-surface-3 text-content',
+    dot: 'border-current',
     variant: 'ring',
   },
   queued: {
@@ -59,7 +59,7 @@ export function StatusBadge({ status }: { status: FileStatus }) {
     >
       {s.variant === 'ring' ? (
         <span
-          className={`h-2 w-2 rounded-full border-[1.5px] ${s.dot}`}
+          className={`h-2.5 w-2.5 rounded-full border-2 ${s.dot}`}
           aria-hidden="true"
         />
       ) : (
