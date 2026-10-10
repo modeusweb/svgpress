@@ -1,40 +1,52 @@
 import type { FileStatus } from '@/types';
 
-const STYLES: Record<FileStatus, { label: string; className: string; dot: string }> = {
+type DotVariant = 'solid' | 'ring';
+
+const STYLES: Record<
+  FileStatus,
+  { label: string; className: string; dot: string; variant: DotVariant }
+> = {
   ready: {
     label: 'Ready',
     className: 'bg-surface-3 text-muted',
-    dot: 'bg-text-subtle',
+    dot: 'border-muted',
+    variant: 'ring',
   },
   queued: {
     label: 'Queued',
     className: 'bg-info-soft text-info',
     dot: 'bg-info',
+    variant: 'solid',
   },
   optimizing: {
     label: 'Optimizing',
     className: 'bg-warning-soft text-warning',
     dot: 'bg-warning',
+    variant: 'solid',
   },
   optimized: {
     label: 'Optimized',
     className: 'bg-success-soft text-success',
     dot: 'bg-success',
+    variant: 'solid',
   },
   no_savings: {
     label: 'No savings',
     className: 'bg-info-soft text-info',
     dot: 'bg-info',
+    variant: 'solid',
   },
   failed: {
     label: 'Failed',
     className: 'bg-danger-soft text-danger',
     dot: 'bg-danger',
+    variant: 'solid',
   },
   cancelled: {
     label: 'Cancelled',
     className: 'bg-surface-3 text-subtle',
-    dot: 'bg-text-subtle',
+    dot: 'bg-subtle',
+    variant: 'solid',
   },
 };
 
@@ -45,8 +57,21 @@ export function StatusBadge({ status }: { status: FileStatus }) {
       data-testid={`status-${status}`}
       className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap ${s.className}`}
     >
-      <span className={`h-1.5 w-1.5 rounded-full ${s.dot}`} aria-hidden="true" />
+      {s.variant === 'ring' ? (
+        <span
+          className={`h-2 w-2 rounded-full border-[1.5px] ${s.dot}`}
+          aria-hidden="true"
+        />
+      ) : (
+        <span
+          className={`h-2 w-2 rounded-full ${s.dot} ${
+            status === 'optimizing' ? 'animate-pulse' : ''
+          }`}
+          aria-hidden="true"
+        />
+      )}
       {s.label}
     </span>
   );
 }
+
