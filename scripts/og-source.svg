@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Arial, 'Helvetica Neue', Helvetica, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B7F36B" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B7F36B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B7F36B"/>
+      <stop offset="100%" stop-color="#8ede3e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0B0D10"/>
+  <circle cx="1060" cy="70" r="440" fill="url(#glow)"/>
+  <rect x="0" y="0" width="6" height="630" fill="#B7F36B"/>
+
+  <g transform="translate(90,84) scale(0.140625)">
+    <rect x="0" y="0" width="512" height="512" rx="112" fill="#12151B"/>
+    <rect x="4" y="4" width="504" height="504" rx="108" fill="none" stroke="#2E3644" stroke-width="8"/>
+    <path d="M148 340 L256 176 L364 340" fill="none" stroke="#B7F36B" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M204 300 L308 300" fill="none" stroke="#B7F36B" stroke-width="44" stroke-linecap="round" opacity="0.5"/>
+  </g>
+  <text x="180" y="132" fill="#E6EAF2" font-size="42" font-weight="700">SVGPress</text>
+
+  <text x="90" y="300" fill="#E6EAF2" font-size="66" font-weight="700">Smaller SVGs.</text>
+  <text x="90" y="372" fill="#E6EAF2" font-size="66" font-weight="700">Cleaner markup.</text>
+
+  <text x="90" y="432" fill="#8B94A7" font-size="26">Batch-optimize SVGs right in your browser.</text>
+  <text x="90" y="466" fill="#8B94A7" font-size="26">No uploads. No sign-up. Runs offline.</text>
+
+  <text x="90" y="560" fill="#626B7E" font-size="22">Powered by SVGO</text>
+
+  <rect x="700" y="180" width="420" height="280" rx="24" fill="#12151B"/>
+  <rect x="700" y="180" width="420" height="280" rx="24" fill="none" stroke="#232936" stroke-width="2"/>
+  <rect x="736" y="212" width="26" height="32" rx="5" fill="none" stroke="#8B94A7" stroke-width="2"/>
+  <path d="M743 224 h12 M743 231 h12" stroke="#8B94A7" stroke-width="2" stroke-linecap="round"/>
+  <text x="776" y="235" fill="#E6EAF2" font-size="23" font-weight="600">example.svg</text>
+  <rect x="1002" y="212" width="86" height="32" rx="16" fill="#B7F36B" fill-opacity="0.14"/>
+  <text x="1045" y="234" fill="#B7F36B" font-size="18" font-weight="700" text-anchor="middle">-75%</text>
+  <text x="736" y="300" fill="#8B94A7" font-size="18">Original</text>
+  <text x="1084" y="300" fill="#8B94A7" font-size="18" text-anchor="end">12.4 KB</text>
+  <rect x="736" y="312" width="348" height="14" rx="7" fill="#2E3644"/>
+  <g stroke="#B7F36B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M910 340 V357"/><path d="M903 351 L910 358 L917 351"/></g>
+  <text x="736" y="392" fill="#E6EAF2" font-size="18" font-weight="600">Optimized</text>
+  <text x="1084" y="392" fill="#B7F36B" font-size="18" font-weight="700" text-anchor="end">3.1 KB</text>
+  <rect x="736" y="404" width="87" height="14" rx="7" fill="url(#bar)"/>
+</svg>

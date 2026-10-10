@@ -1,0 +1,6 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <g id="layer-group" transform="translate(10, 10)">
+    <path id="path-a" d="M 10.000 10.000 L 100.000 10.000 L 100.000 100.000 Z" fill="#3366cc"/>
+    <path id="path-b" d="M 20.000 20.000 L 90.000 20.000 L 90.000 90.000 Z" fill="#cc6633"/>
+  </g>
+</svg>

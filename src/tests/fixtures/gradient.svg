@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- A gradient demo with comments and metadata -->
+  <defs>
+    <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff0000"/>
+      <stop offset="1" stop-color="#0000ff"/>
+    </linearGradient>
+    <mask id="mask1">
+      <rect x="0" y="0" width="200" height="200" fill="#ffffff"/>
+      <circle cx="100" cy="100" r="60" fill="#000000"/>
+    </mask>
+  </defs>
+  <metadata>Editor metadata that should be removed</metadata>
+  <rect x="10.000" y="10.000" width="180.000" height="180.000" rx="8" fill="url(#grad1)" mask="url(#mask1)"/>
+  <circle cx="100" cy="100" r="50" fill="#00ff00" opacity="0.5"/>
+</svg>
