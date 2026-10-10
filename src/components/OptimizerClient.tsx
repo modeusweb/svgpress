@@ -8,6 +8,7 @@ import { useToast } from '@/hooks/use-toast';
 import { useTheme } from '@/hooks/use-theme';
 import { DEFAULT_SETTINGS, PRESETS } from '@/lib/svgo/config';
 import { repoUrl } from '@/lib/site';
+import { VERSION as SVGO_VERSION } from 'svgo/browser';
 import { loadPreferences, loadSettings, savePreferences, saveSettings, MAX_FILES } from '@/lib/files';
 import { UploadDropzone } from '@/components/upload/UploadDropzone';
 import { FileTable } from '@/components/files/FileTable';
@@ -201,7 +202,21 @@ export function OptimizerClient() {
 
       <footer className="border-t border-line py-6">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 text-xs text-subtle sm:flex-row sm:px-6">
-          <p>SVGPress processes everything locally in your browser. Files are never uploaded.</p>
+          <div className="flex flex-col items-center gap-1.5 sm:items-start">
+            <p>SVGPress processes everything locally in your browser. Files are never uploaded.</p>
+            <p className="inline-flex items-center gap-1.5">
+              Powered by
+              <a
+                href="https://github.com/svg/svgo"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-1 rounded-full border border-line bg-surface-2 px-2 py-0.5 font-medium text-content transition-colors hover:border-accent/50 hover:text-accent"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+                SVGO v{SVGO_VERSION}
+              </a>
+            </p>
+          </div>
           <a
             href={repoUrl}
             target="_blank"
